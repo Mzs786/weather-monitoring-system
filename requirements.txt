@@ -1,0 +1,16 @@
+# HTTP library to make requests to OpenWeatherMap API
+requests==2.31.0
+
+# Library for scheduling tasks at intervals
+APScheduler==3.10.4
+
+# SQLite support is built into Python, so no need for additional packages
+# Optionally, you can add SQLAlchemy if you want more complex database management later
+
+# Logging is a built-in Python module, so no package required
+
+# For Windows (if needed for compatibility)
+pywin32==306.1  # Required if you need Windows-specific services
+
+# If using Python 3.11 or above, some users may encounter issues with APScheduler's time zones
+pytz==2023.3

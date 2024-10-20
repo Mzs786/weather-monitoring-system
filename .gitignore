@@ -1,0 +1,81 @@
+# Python-specific ignores
+*.py[cod]       # Compiled Python files
+__pycache__/    # Python cache directories
+*.so            # C extensions
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+wheels/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# VS Code configuration
+.vscode/
+
+# Pytest
+.cache/
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+*.sql
+*.sqlite
+
+# Environments
+.env
+.env.*.local
+*.envrc
+
+# Generated files
+*.bak
+*.swp
+*.tmp
+*.temp
+*.orig
+*.rej
+
+# Ignore Docker and Podman container files if used later
+docker-compose.override.yml
