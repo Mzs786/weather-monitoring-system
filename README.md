@@ -82,7 +82,7 @@ How the Application Works
 
 ``Fetching Weather Data:``
 
-``The get_weather_data_for_cities function in src/weather_data_fetcher.py retrieves weather data from the OpenWeatherMap API for a list of cities.``
+The get_weather_data_for_cities function in src/weather_data_fetcher.py retrieves weather data from the OpenWeatherMap API for a list of cities.
 
 
 ``Storing Data in SQLite:``
@@ -91,7 +91,8 @@ The store_weather_data function in src/data_storage.py stores the fetched weathe
 
 ``Scheduler:``
 
-The APScheduler library is used to schedule weather data fetching at regular intervals (e.g., every 10 seconds). You can adjust the scheduling interval in the src/scheduler.py file.
+The APScheduler library is used to schedule weather data fetching at regular intervals (e.g., every 10 seconds or 5 minutes). 
+You can adjust the scheduling interval in the src/scheduler.py file.
 
 ``Directory Structure``
 ```
@@ -108,7 +109,7 @@ weather-monitoring-system/
 └── README.md                    # Project documentation (this file)
 ```
 
-``Customization``
+``Customization:``
 
 Adding/Removing Cities: You can modify the list of cities for which you want to fetch weather data in the src/weather_data_fetcher.py file.
 
@@ -116,17 +117,17 @@ Adding/Removing Cities: You can modify the list of cities for which you want to 
 cities = ["Delhi", "Mumbai", "Chennai", "Bengaluru", "Kolkata"]
 ```
 
-```
-Scheduling Interval: To change how frequently the weather data is fetched, edit the interval in the src/scheduler.py file:
-```
+
+``Scheduling Interval:`` To change how frequently the weather data is fetched, edit the interval in the src/scheduler.py file:
+
 
 ```
-scheduler.add_job(fetch_weather_and_store_data, 'interval', seconds=10)
+scheduler.add_job(fetch_weather_and_store_data, 'interval', minutes=5)
 ```
 # Fetch every 5 minutes
 
 
-``Troubleshooting``
+``Troubleshooting:``
 
 Error: "Table has no column named X": This error indicates that your SQLite table schema doesn't match the data you're trying to insert. Check that your weather_summary table schema in data_storage.py matches the data structure.
 
